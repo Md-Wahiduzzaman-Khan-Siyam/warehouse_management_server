@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseManagement.Infrastructure", "WarehouseManagement.Infrastructure\WarehouseManagement.Infrastructure.csproj", "{53452D80-BBB3-4213-98C4-69EBBA7C3C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseManagement.Application", "WarehouseManagement.Application\WarehouseManagement.Application.csproj", "{1BB981C1-0CAF-4C4C-8331-ADC96973345C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseManagement.Domain", "WarehouseManagement.Domain\WarehouseManagement.Domain.csproj", "{A520DFB8-4B71-4F67-866C-D95521453BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseManagement.API", "WarehouseManagement.API\WarehouseManagement.API.csproj", "{D24883CA-AF6D-48F8-8EEF-21A47B9A6ADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53452D80-BBB3-4213-98C4-69EBBA7C3C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53452D80-BBB3-4213-98C4-69EBBA7C3C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53452D80-BBB3-4213-98C4-69EBBA7C3C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53452D80-BBB3-4213-98C4-69EBBA7C3C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB981C1-0CAF-4C4C-8331-ADC96973345C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB981C1-0CAF-4C4C-8331-ADC96973345C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB981C1-0CAF-4C4C-8331-ADC96973345C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB981C1-0CAF-4C4C-8331-ADC96973345C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A520DFB8-4B71-4F67-866C-D95521453BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A520DFB8-4B71-4F67-866C-D95521453BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A520DFB8-4B71-4F67-866C-D95521453BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A520DFB8-4B71-4F67-866C-D95521453BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24883CA-AF6D-48F8-8EEF-21A47B9A6ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24883CA-AF6D-48F8-8EEF-21A47B9A6ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24883CA-AF6D-48F8-8EEF-21A47B9A6ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24883CA-AF6D-48F8-8EEF-21A47B9A6ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
