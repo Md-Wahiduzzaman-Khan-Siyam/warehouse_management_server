@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using WarehouseManagement.Application.Interfaces;
+using WarehouseManagement.Application.Services;
+using WarehouseManagement.Infrastructure.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql
+    (builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
