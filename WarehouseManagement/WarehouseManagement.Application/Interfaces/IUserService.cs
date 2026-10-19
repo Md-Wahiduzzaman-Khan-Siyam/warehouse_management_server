@@ -12,6 +12,10 @@ public interface IUserService
     
     UserDto GetUser(Guid id);
     
+    UserDto ChangePassword(Guid id, ChangePasswordDto changePasswordDto);
+    
+    UserDto SetUserActive(Guid id, SetActiveUserDto setUserActiveDto);
+    
     List<UserDto> GetAllUsers(List<Guid>? usersIds);
     
 }

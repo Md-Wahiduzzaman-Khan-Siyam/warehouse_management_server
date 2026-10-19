@@ -10,7 +10,9 @@ public interface IUserRepository
     
     bool DeleteUser(User user);
     
-    User GetUser(Guid id);
+    User? GetUserById(Guid id);
+    
+    User? GetUserByUserNameOrEmail(string userNameOrEmail);
     
     List<User> GetAllUsers(List<Guid>? userIds);
     
