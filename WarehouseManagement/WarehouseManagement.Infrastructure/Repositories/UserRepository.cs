@@ -41,9 +41,10 @@ public class UserRepository : IUserRepository
 
     public User? GetUserById(Guid id)
     {
-        var user = _dbContext.Users.Find(id);
-        _dbContext.SaveChanges();
-        return user;
+        return _dbContext.Users
+            .Include(u => u.UserRoles)
+            .ThenInclude(ur => ur.Role)
+            .FirstOrDefault(u => u.Id == id);
     }
 
     public User? GetUserByUserNameOrEmail(string userNameOrEmail)

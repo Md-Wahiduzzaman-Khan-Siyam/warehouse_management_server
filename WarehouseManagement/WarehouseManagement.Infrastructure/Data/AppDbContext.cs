@@ -18,4 +18,6 @@ public class AppDbContext : DbContext
     public DbSet<Warehouse>  Warehouses { get; set; }
     
     public DbSet<Stock>  Stocks { get; set; }
+    
+    public DbSet<StockMovement>  StockMovements { get; set; }
 }
