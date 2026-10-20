@@ -4,7 +4,7 @@ namespace WarehouseManagement.Domain.Entities;
 
 public class StockMovement : BaseEntity
 {
-    public StockMovementType MovementTypeType { get; set; }
+    public StockMovementType MovementType { get; set; }
     
     public Guid ProductId { get; set; }
     

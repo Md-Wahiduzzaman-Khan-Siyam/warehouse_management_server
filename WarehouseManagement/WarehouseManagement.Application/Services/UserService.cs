@@ -39,7 +39,7 @@ public class UserService : IUserService
             Email = createdUser.Email,
         };*/
         
-        return ToDo(createdUser);
+        return ToDto(createdUser);
     }
 
     public UserDto UpdateUser(UpdateUserDto updateUserDto)
@@ -59,7 +59,7 @@ public class UserService : IUserService
         
         var updatedUser = _userRepository.UpdateUser(user);
         
-        return ToDo(updatedUser);
+        return ToDto(updatedUser);
     }
 
     public UserDto DeleteUser(Guid id)
@@ -75,7 +75,7 @@ public class UserService : IUserService
             throw new InvalidOperationException($"User with id '{id}' could not be deleted.");
         }
 
-        return ToDo(user);
+        return ToDto(user);
     }
 
     public UserDto GetUser(Guid id)
@@ -85,7 +85,7 @@ public class UserService : IUserService
         {
             throw new KeyNotFoundException($"User with id '{id}' was not found.");
         }
-        return ToDo(user);
+        return ToDto(user);
     }
 
     public UserDto ChangePassword(Guid id, ChangePasswordDto changePasswordDto)
@@ -105,7 +105,7 @@ public class UserService : IUserService
         
         var  updatedUser = _userRepository.UpdateUser(user);
         
-        return ToDo(updatedUser);
+        return ToDto(updatedUser);
     }
 
     public UserDto SetUserActive(Guid id, SetActiveUserDto setUserActiveDto)
@@ -119,17 +119,17 @@ public class UserService : IUserService
         
         var updatedUser = _userRepository.UpdateUser(user);
         
-        return ToDo(updatedUser);
+        return ToDto(updatedUser);
     }
 
     public List<UserDto> GetAllUsers(List<Guid>? usersIds)
     {
         var users = _userRepository.GetAllUsers(usersIds);
         
-        return users.Select(ToDo).ToList();
+        return users.Select(ToDto).ToList();
     }
     
-    private static UserDto ToDo(User user)
+    private static UserDto ToDto(User user)
     {
         return new UserDto
         {
