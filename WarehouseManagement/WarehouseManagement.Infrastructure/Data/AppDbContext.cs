@@ -20,4 +20,7 @@ public class AppDbContext : DbContext
     public DbSet<Stock>  Stocks { get; set; }
     
     public DbSet<StockMovement>  StockMovements { get; set; }
+    
+    
+    public DbSet<RefreshToken>  RefreshTokens { get; set; }
 }
