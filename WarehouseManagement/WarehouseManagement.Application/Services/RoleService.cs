@@ -58,9 +58,8 @@ public class RoleService : IRoleService
         {
             throw new KeyNotFoundException($"Role with id '{id}' was not found.");
         }
-        var deletedRole = _roleRepository.GetRoleById(role.Id);
         
-        return ToDto(deletedRole);
+        return ToDto(role);
     }
 
     public List<RoleDto> GetAllRoles(List<Guid>? roleIds)
