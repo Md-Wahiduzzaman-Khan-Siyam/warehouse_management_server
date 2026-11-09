@@ -14,7 +14,7 @@ public interface IUserService
     
     UserDto ChangePassword(Guid id, ChangePasswordDto changePasswordDto);
     
-    UserDto SetUserActive(Guid id, SetActiveUserDto setUserActiveDto);
+    UserDto SetUserActive(Guid id, SetUserActiveDto setUserActiveDto);
     
     List<UserDto> GetAllUsers(List<Guid>? usersIds);
     

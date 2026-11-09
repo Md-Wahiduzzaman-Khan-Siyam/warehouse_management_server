@@ -1,6 +1,6 @@
 namespace WarehouseManagement.Application.Dtos;
 
-public class SetActiveUserDto
+public class SetUserActiveDto
 {
     public required bool IsActive { get; set; }
 }

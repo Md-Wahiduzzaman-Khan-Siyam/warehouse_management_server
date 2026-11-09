@@ -101,14 +101,14 @@ public class UserService : IUserService
             throw new InvalidOperationException($"Current password is invalid.");
         }
 
-        user.Password = changePasswordDto.Hash(ChangePasswordDto.NewPassword);
+        user.PasswordHash = PasswordHasher.Hash(changePasswordDto.NewPassword);
         
         var  updatedUser = _userRepository.UpdateUser(user);
         
         return ToDto(updatedUser);
     }
 
-    public UserDto SetUserActive(Guid id, SetActiveUserDto setUserActiveDto)
+    public UserDto SetUserActive(Guid id, SetUserActiveDto setUserActiveDto)
     {
         var user =  _userRepository.GetUserById(id);
         if (user == null)
