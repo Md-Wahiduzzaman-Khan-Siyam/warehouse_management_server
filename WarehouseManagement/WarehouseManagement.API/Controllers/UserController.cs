@@ -60,7 +60,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPatch("{id:guid}/active")]
-    public IActionResult SetUserActive(Guid id, [FromBody] SetActiveUserDto setActiveUserDto)
+    public IActionResult SetUserActive(Guid id, [FromBody] SetUserActiveDto setActiveUserDto)
     {
         var userDto = _userService.SetUserActive(id, setActiveUserDto);
         return Ok(userDto);

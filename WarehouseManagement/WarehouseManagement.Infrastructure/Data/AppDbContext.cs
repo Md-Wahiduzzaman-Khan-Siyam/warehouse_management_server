@@ -15,6 +15,10 @@ public class AppDbContext : DbContext
     
     public DbSet<User>  Users { get; set; }
     
+    public DbSet<Role>  Roles { get; set; }
+    
+    public DbSet<UserRoles> UserRoles { get; set; }
+    
     public DbSet<Warehouse>  Warehouses { get; set; }
     
     public DbSet<Stock>  Stocks { get; set; }

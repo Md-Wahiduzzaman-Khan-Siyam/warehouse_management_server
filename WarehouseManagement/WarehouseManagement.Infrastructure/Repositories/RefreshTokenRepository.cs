@@ -29,7 +29,7 @@ public class RefreshTokenRepository : IRefreshTokenRepository
         return refreshToken;
     }
 
-    public RefreshToken? GetRefreshToken(string token)
+    public RefreshToken? GetRefreshTokenByToken(string token)
     {
         return _dbcontext.RefreshTokens
             .Where(rt => rt.Token == token)
