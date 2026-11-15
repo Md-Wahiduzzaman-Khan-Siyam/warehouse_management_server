@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WarehouseManagement.Application.Dtos;
 using WarehouseManagement.Application.Interfaces;
@@ -5,7 +6,7 @@ using WarehouseManagement.Domain.Entities;
 
 namespace WarehouseManagement.API.Controllers;
 
-
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class StockMovementController : ControllerBase

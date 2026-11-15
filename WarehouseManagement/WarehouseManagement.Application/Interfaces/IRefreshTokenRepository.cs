@@ -8,7 +8,7 @@ public interface IRefreshTokenRepository
     
     RefreshToken UpdateRefreshToken(RefreshToken refreshToken);
     
-    RefreshToken? GetRefreshToken(string token);
+    RefreshToken? GetRefreshTokenByToken(string token);
     
     List<RefreshToken> GetActiveRefreshTokensByUserId(Guid userId);
 }

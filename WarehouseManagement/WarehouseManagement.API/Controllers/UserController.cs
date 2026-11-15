@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WarehouseManagement.Application.Dtos;
 using WarehouseManagement.Application.Interfaces;
 
 namespace WarehouseManagement.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : ControllerBase
@@ -60,7 +62,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPatch("{id:guid}/active")]
-    public IActionResult SetUserActive(Guid id, [FromBody] SetActiveUserDto setActiveUserDto)
+    public IActionResult SetUserActive(Guid id, [FromBody] SetUserActiveDto setActiveUserDto)
     {
         var userDto = _userService.SetUserActive(id, setActiveUserDto);
         return Ok(userDto);
