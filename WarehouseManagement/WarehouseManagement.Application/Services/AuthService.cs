@@ -87,7 +87,7 @@ public class AuthService : IAuthService
         return response;
     }
 
-    public void RevokeToken(RefreshTokenRequestDto refreshTokenRequestDto)
+    public void RevokeRefreshToken(RefreshTokenRequestDto refreshTokenRequestDto)
     {
         var storedToken = _refreshTokenRepository.GetRefreshTokenByToken(refreshTokenRequestDto.RefreshToken);
         if (storedToken == null || !storedToken.IsActive)

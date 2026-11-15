@@ -10,5 +10,5 @@ public interface IAuthService
     
     AuthResponseDto RefreshToken(RefreshTokenRequestDto refreshTokenRequestDto);
     
-    void RevokeToken(RefreshTokenRequestDto refreshTokenRequestDto);
+    void RevokeRefreshToken(RefreshTokenRequestDto refreshTokenRequestDto);
 }
